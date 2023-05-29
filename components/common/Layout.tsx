@@ -8,7 +8,7 @@ type Props = {
   title?: string;
 };
 
-const Layout = ({ children, title = "This is the default title" }: Props) => (
+const Layout = ({ children, title = "이야~" }: Props) => (
   <StyledDiv>
     <Head>
       <title>{title}</title>
