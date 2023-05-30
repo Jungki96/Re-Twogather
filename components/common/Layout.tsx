@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { styled } from "@mui/system";
+import { Height } from "@mui/icons-material";
 
 type Props = {
   children?: ReactNode;
@@ -10,22 +11,24 @@ type Props = {
 
 const Layout = ({ children, title = "이야~" }: Props) => (
   <StyledDiv>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <header>
-      <nav>
-        <Link href="/">Home</Link> | <Link href="/about">About</Link> |{" "}
-        <Link href="/users">Users List</Link> | <a href="/api/users">Users API</a>
-      </nav>
-    </header>
-    {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
+    <StFrame>
+      <Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <header>
+        <nav>
+          <Link href="/">Home</Link> | <Link href="/about">About</Link> |{" "}
+          <Link href="/users">Users List</Link> | <a href="/api/users">Users API</a>
+        </nav>
+      </header>
+      {children}
+      <footer>
+        <hr />
+        <span>I'm here to stay (Footer)</span>
+      </footer>
+    </StFrame>
   </StyledDiv>
 );
 
@@ -45,4 +48,10 @@ const StyledDiv = styled("div")(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     backgroundImage: "none",
   },
+}));
+
+const StFrame = styled("div")(() => ({
+  width: "20vw",
+  height: "80vh",
+  background: "white",
 }));
