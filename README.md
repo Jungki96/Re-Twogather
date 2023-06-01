@@ -29,3 +29,5 @@
    npx tsc --init
 6. 빌드 설정
    npm run build
+7. 실행 코드
+   npm run dev
