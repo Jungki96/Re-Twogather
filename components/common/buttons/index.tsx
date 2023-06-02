@@ -30,7 +30,7 @@ const StButton = styled("button")({
   backgroundColor: "white", // Default background color
   color: "black", // Default text color
   "&:hover": {
-    backgroundColor: "purple", // Red and blue mix
+    backgroundColor: "red", // Red and blue mix
     color: "white", // On hover text color
   },
 });
