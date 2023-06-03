@@ -23,7 +23,7 @@ const Layout = ({ children, title = "Twogather" }: Props) => (
         <hr />
         <nav>
           <Link href="/">Home일거야?</Link> | <Link href="/about">About</Link> |{" "}
-          <Link href="/users">Users List</Link> | <a href="/api/users">Users API</a>
+          <Link href="/users">유저리스트</Link> | <a href="/api/users">Users API</a>
         </nav>
       </footer>
     </StFrame>
