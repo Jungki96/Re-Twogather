@@ -10,7 +10,7 @@ const IndexPage = () => (
         console.log("안뇽");
       }}
     >
-      MUI 연습버튼
+      MUI 연습버튼입니다
     </Button>
     <h1>Hello Next.js 👋</h1>
     <p>
