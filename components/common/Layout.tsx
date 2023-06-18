@@ -17,15 +17,19 @@ const Layout = ({ children, title = "Twogather" }: Props) => (
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <header></header>
+      <header>
+        <Link href="/">Home</Link> | <Link href="/about">About</Link> |{" "}
+        <Link href="/users">User</Link> | <a href="/api/users">Users API</a> |{" "}
+        <Link href="/firsthw">기초</Link>
+      </header>
       {children}
       <footer>
         <hr />
-        <nav>
+        {/* <nav>
           <Link href="/">Home</Link> | <Link href="/about">About</Link> |{" "}
           <Link href="/users">User</Link> | <a href="/api/users">Users API</a> |{" "}
           <Link href="/firsthw">기초</Link>
-        </nav>
+        </nav> */}
       </footer>
     </StFrame>
   </StyledDiv>

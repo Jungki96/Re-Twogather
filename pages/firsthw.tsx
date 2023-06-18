@@ -2,13 +2,13 @@ import Link from "next/link";
 import Layout from "../components/common/Layout";
 
 const AboutPage = () => (
-  <Layout title="About | Next.js + TypeScript Example">
-    <h1>About</h1>
-    <p>여기 과제 페이지
-    </p>
-    <p>
-      <Link href="/">Go home</Link>
-    </p>
+  <Layout title="기초 입문주차 숙제 ">
+    <h1>기초 입문주차 숙제</h1>
+    <p />
+    {/* <Link href="/">Home</Link> */}
+    <div>
+      <h3>하이용</h3>
+    </div>
   </Layout>
 );
 
