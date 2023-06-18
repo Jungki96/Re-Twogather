@@ -2,6 +2,7 @@ import Link from "next/link";
 import Layout from "../components/common/Layout";
 // import Button from "@mui/material/Button";
 import Button from "../components/common/buttons/index";
+import { styled } from "@mui/system";
 
 const IndexPage = () => (
   <Layout>
@@ -20,3 +21,5 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
+const StButton = styled("button")({});
