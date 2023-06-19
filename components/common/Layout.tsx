@@ -2,35 +2,23 @@ import React, { ReactNode } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { styled } from "@mui/system";
-import { Height } from "@mui/icons-material";
 
 type Props = {
-  children?: ReactNode;
-  title?: string;
+  children: string;
 };
 
-const Layout = ({ children, title = "Twogather" }: Props) => (
+const Layout = ({ children }: Props) => (
   <StyledDiv>
     <StFrame>
       <Head>
-        <title>{title}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <header>
-        <Link href="/">Home</Link> | <Link href="/about">About</Link> |{" "}
-        <Link href="/users">User</Link> | <a href="/api/users">Users API</a> |{" "}
-        <Link href="/firsthw">기초</Link>
+        <Link href="/">Home</Link> | <Link href="/first">기초</Link>
       </header>
       {children}
-      <footer>
-        <hr />
-        {/* <nav>
-          <Link href="/">Home</Link> | <Link href="/about">About</Link> |{" "}
-          <Link href="/users">User</Link> | <a href="/api/users">Users API</a> |{" "}
-          <Link href="/firsthw">기초</Link>
-        </nav> */}
-      </footer>
+      {/* <footer></footer> */}
     </StFrame>
   </StyledDiv>
 );
@@ -57,4 +45,8 @@ const StFrame = styled("div")(() => ({
   width: "20vw",
   height: "80vh",
   background: "white",
+}));
+
+const StTitle = styled("div")(() => ({
+  fontSize: "14px",
 }));
