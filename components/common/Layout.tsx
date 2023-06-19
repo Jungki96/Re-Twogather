@@ -3,11 +3,11 @@ import Link from "next/link";
 import Head from "next/head";
 import { styled } from "@mui/system";
 
-type Props = {
-  children: string;
-};
+interface LayoutProps {
+  children: React.ReactNode;
+}
 
-const Layout = ({ children }: Props) => (
+const Layout: React.FC<LayoutProps> = ({ children }) => (
   <StyledDiv>
     <StFrame>
       <Head>
