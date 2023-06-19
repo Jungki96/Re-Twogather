@@ -14,7 +14,7 @@ const IndexPage = () => {
     <Layout>
       <Button
         onClick={() => {
-          alert("작동됩니다.");
+          alert("작동됩니다");
         }}
       >
         MUI 연습버튼입니다요
