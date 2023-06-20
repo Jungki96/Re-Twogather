@@ -2,30 +2,23 @@ import React, { ReactNode } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { styled } from "@mui/system";
-import { Height } from "@mui/icons-material";
 
-type Props = {
-  children?: ReactNode;
-  title?: string;
-};
+interface LayoutProps {
+  children: React.ReactNode;
+}
 
-const Layout = ({ children, title = "Twogather" }: Props) => (
+const Layout: React.FC<LayoutProps> = ({ children }) => (
   <StyledDiv>
     <StFrame>
       <Head>
-        <title>{title}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <header></header>
+      <header>
+        <Link href="/">Home</Link> | <Link href="/first">기초</Link>
+      </header>
       {children}
-      <footer>
-        <hr />
-        <nav>
-          <Link href="/">Home일거야</Link> | <Link href="/about">About</Link> |{" "}
-          <Link href="/users">유저리스트</Link> | <a href="/api/users">Users API를 이용</a>
-        </nav>
-      </footer>
+      {/* <footer></footer> */}
     </StFrame>
   </StyledDiv>
 );
@@ -52,4 +45,8 @@ const StFrame = styled("div")(() => ({
   width: "450px",
   height: "80vh",
   background: "white",
+}));
+
+const StTitle = styled("div")(() => ({
+  fontSize: "14px",
 }));

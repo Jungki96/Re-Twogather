@@ -25,6 +25,8 @@ export default Button;
 //   }));
 
 const StButton = styled("button")({
+  // display: "flex",
+  // justifyContent: "center",
   width: "100px",
   height: "50px",
   backgroundColor: "white", // Default background color
