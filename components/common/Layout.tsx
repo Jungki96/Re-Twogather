@@ -49,7 +49,7 @@ const StyledDiv = styled("div")(({ theme }) => ({
 }));
 
 const StFrame = styled("div")(() => ({
-  width: "20vw",
+  width: "450px",
   height: "80vh",
   background: "white",
 }));
