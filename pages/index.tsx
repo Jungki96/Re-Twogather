@@ -6,9 +6,9 @@ import { useEffect } from "react";
 import app from "../components/common/firebase";
 
 const IndexPage = () => {
-  useEffect(() => {
-    console.log("app", app);
-  }, []);
+  // useEffect(() => {
+  //   console.log("app", app);
+  // }, []);
 
   return (
     <Layout>

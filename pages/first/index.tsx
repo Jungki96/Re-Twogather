@@ -5,8 +5,8 @@ type Props = {
   children: string;
 };
 
-type Information = { name: string; description: string };
-const [info, setInformation] = useState<Information | null>(null);
+// type Information = { name: string; description: string };
+// const [info, setInformation] = useState<Information | null>(null);
 
 // 왜 빨간 줄이 나오는데 작동이 되는거지?
 const children: Props = "왜?";
