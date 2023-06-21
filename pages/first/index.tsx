@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Layout from "../../components/common/Layout";
 
 // 왜 빨간 줄이 나오는데 작동이 되는거지?
@@ -9,31 +9,37 @@ type Props = {
   information: string[];
 };
 
-const [init, setInit] = useState({
-  title: "",
-  desc:"",
-});
 
-const [information, setInformation] = useState<string[]>([]);
 
-const submitBtn = (e: React.ChangeEvent<HTMLInputElement>) => {
-  const { name, value } = e.target as HTMLInputElement;
-  setInit({ ...init, [name]: value });
-}
+const First: React.FC<Props> = () => {
 
-const First: React.FC<Props> = () => (
+  const initialData = {
+    title: "",
+    desc: "",
+  };
+  
+  const [init, setInit] = useState(initialData);
+  
+  const submitBtn = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target as HTMLInputElement;
+    setInit({ ...init, [name]: value });
+  }
+
+  return(
     <div>
           <Layout>
-            <div>
+            <form>
               <div>
                 제목 <input name="title" onChange={submitBtn} />
               </div>
               <div>
                 할일 <input name="desc" onChange={submitBtn} />
               </div>
-            </div>
+              <button>제출</button>
+            </form>
       </Layout>
     </div>
-);
+    );
+  }
 
 export default First;
