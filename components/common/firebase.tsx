@@ -15,5 +15,5 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-//강의
+//강의 꼭보기
 export default app;
