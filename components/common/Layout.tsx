@@ -15,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <header>
-        <Link href="/">Home</Link> | <Link href="/first">기초?q</Link>
+        <Link href="/">Home</Link> | <Link href="/first">기초?</Link>
       </header>
       {children}
       {/* <footer></footer> */}
